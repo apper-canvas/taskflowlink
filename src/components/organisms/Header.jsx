@@ -1,11 +1,14 @@
-import { motion } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
-import ApperIcon from '@/components/ApperIcon';
-import Button from '@/components/atoms/Button';
-import SearchBar from '@/components/molecules/SearchBar';
-import ProgressRing from '@/components/molecules/ProgressRing';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
+import ExportDialog from "@/components/organisms/ExportDialog";
+import ApperIcon from "@/components/ApperIcon";
+import Button from "@/components/atoms/Button";
+import ProgressRing from "@/components/molecules/ProgressRing";
+import SearchBar from "@/components/molecules/SearchBar";
 
 const Header = ({ onSearch, onAddTask, toggleMobileSidebar, progress = 0 }) => {
+  const [showExportDialog, setShowExportDialog] = useState(false);
   const location = useLocation();
   
   const getPageTitle = () => {
@@ -52,10 +55,19 @@ const Header = ({ onSearch, onAddTask, toggleMobileSidebar, progress = 0 }) => {
           </div>
         </div>
 
-        <div className="flex items-center gap-4">
+<div className="flex items-center gap-4">
           <div className="hidden md:block">
             <SearchBar onSearch={onSearch} />
           </div>
+          
+          <Button 
+            variant="outline" 
+            onClick={() => setShowExportDialog(true)}
+            className="gap-2"
+          >
+            <ApperIcon name="Download" size={16} />
+            <span className="hidden sm:inline">Export</span>
+          </Button>
           
           <Button onClick={onAddTask} className="gap-2">
             <ApperIcon name="Plus" size={16} />
@@ -65,9 +77,14 @@ const Header = ({ onSearch, onAddTask, toggleMobileSidebar, progress = 0 }) => {
       </div>
 
       {/* Mobile search */}
-      <div className="md:hidden mt-4">
+<div className="md:hidden mt-4">
         <SearchBar onSearch={onSearch} />
       </div>
+
+      <ExportDialog 
+        isOpen={showExportDialog} 
+        onClose={() => setShowExportDialog(false)} 
+      />
     </motion.header>
   );
 };

@@ -128,7 +128,12 @@ export const taskService = {
     if (taskIndex === -1) return null;
     
     const updatedTask = { ...tasks[taskIndex], archived: false };
-    tasks[taskIndex] = updatedTask;
+tasks[taskIndex] = updatedTask;
     return { ...updatedTask };
+  },
+
+  async export() {
+    await delay(300);
+    return [...tasks];
   }
 };
