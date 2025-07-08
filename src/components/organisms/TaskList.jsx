@@ -1,13 +1,13 @@
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { format, isToday, isPast, parseISO } from 'date-fns';
-import { toast } from 'react-toastify';
-import ApperIcon from '@/components/ApperIcon';
-import Button from '@/components/atoms/Button';
-import Badge from '@/components/atoms/Badge';
-import Checkbox from '@/components/atoms/Checkbox';
-import { taskService } from '@/services/api/taskService';
-import { cn } from '@/utils/cn';
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { format, isPast, isToday, parseISO } from "date-fns";
+import { toast } from "react-toastify";
+import { cn } from "@/utils/cn";
+import ApperIcon from "@/components/ApperIcon";
+import Badge from "@/components/atoms/Badge";
+import Button from "@/components/atoms/Button";
+import Checkbox from "@/components/atoms/Checkbox";
+import { taskService } from "@/services/api/taskService";
 
 const TaskList = ({ tasks, onTaskUpdate, onTaskDelete, onTaskEdit, searchTerm, filters }) => {
   const [localTasks, setLocalTasks] = useState(tasks);
@@ -67,16 +67,18 @@ const TaskList = ({ tasks, onTaskUpdate, onTaskDelete, onTaskEdit, searchTerm, f
     if (filters.status) {
       switch (filters.status) {
         case 'completed':
+case 'completed':
           if (!task.completed) return false;
           break;
         case 'pending':
           if (task.completed) return false;
           break;
-        case 'overdue':
+        case 'overdue': {
           if (!task.dueDate || task.completed) return false;
           const dueDate = parseISO(task.dueDate);
           if (!isPast(dueDate) || isToday(dueDate)) return false;
           break;
+        }
         default:
           break;
       }
@@ -85,20 +87,21 @@ const TaskList = ({ tasks, onTaskUpdate, onTaskDelete, onTaskEdit, searchTerm, f
     // Due date filter
     if (filters.dueDate) {
       switch (filters.dueDate) {
-        case 'today':
+        case 'today': {
           if (!task.dueDate) return false;
           const today = parseISO(task.dueDate);
           if (!isToday(today)) return false;
           break;
-        case 'overdue':
+        }
+        case 'overdue': {
           if (!task.dueDate || task.completed) return false;
           const overdue = parseISO(task.dueDate);
           if (!isPast(overdue) || isToday(overdue)) return false;
           break;
+        }
         default:
           break;
       }
-    }
 
     return true;
   });
