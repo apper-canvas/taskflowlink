@@ -64,10 +64,10 @@ const TaskList = ({ tasks, onTaskUpdate, onTaskDelete, onTaskEdit, searchTerm, f
     }
 
     // Status filter
+// Status filter
     if (filters.status) {
       switch (filters.status) {
         case 'completed':
-case 'completed':
           if (!task.completed) return false;
           break;
         case 'pending':
@@ -102,8 +102,8 @@ case 'completed':
         default:
           break;
       }
-
-    return true;
+    }
+return true;
   });
 
   const TaskCard = ({ task }) => {
