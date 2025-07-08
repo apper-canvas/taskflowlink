@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "name": "Work",
+    "color": "#5B4CFF",
+    "icon": "Briefcase",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "taskCount": 3
+  },
+  {
+    "Id": 2,
+    "name": "Personal",
+    "color": "#FF6B6B",
+    "icon": "User",
+    "createdAt": "2024-01-01T00:00:00Z",
+    "taskCount": 4
+  },
+  {
+    "Id": 3,
+    "name": "Learning",
+    "color": "#4ECDC4",
+    "icon": "BookOpen",
+    "createdAt": "2024-01-02T00:00:00Z",
+    "taskCount": 1
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "Id": 1,
+    "title": "Complete project proposal",
+    "description": "Write and submit the Q4 project proposal for the marketing campaign",
+    "listId": "1",
+    "priority": "high",
+    "dueDate": "2024-01-15T10:00:00Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-10T09:00:00Z",
+    "archived": false
+  },
+  {
+    "Id": 2,
+    "title": "Buy groceries",
+    "description": "Milk, bread, eggs, fruits, vegetables",
+    "listId": "2",
+    "priority": "medium",
+    "dueDate": "2024-01-14T18:00:00Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-10T08:30:00Z",
+    "archived": false
+  },
+  {
+    "Id": 3,
+    "title": "Call dentist",
+    "description": "Schedule routine cleaning appointment",
+    "listId": "2",
+    "priority": "low",
+    "dueDate": "2024-01-16T14:00:00Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-09T15:20:00Z",
+    "archived": false
+  },
+  {
+    "Id": 4,
+    "title": "Review code changes",
+    "description": "Review pull requests for the authentication module",
+    "listId": "1",
+    "priority": "high",
+    "dueDate": "2024-01-13T16:00:00Z",
+    "completed": true,
+    "completedAt": "2024-01-13T15:30:00Z",
+    "createdAt": "2024-01-12T10:00:00Z",
+    "archived": false
+  },
+  {
+    "Id": 5,
+    "title": "Plan weekend trip",
+    "description": "Research destinations and book accommodation",
+    "listId": "2",
+    "priority": "low",
+    "dueDate": "2024-01-20T12:00:00Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-11T14:00:00Z",
+    "archived": false
+  },
+  {
+    "Id": 6,
+    "title": "Update resume",
+    "description": "Add recent projects and skills to resume",
+    "listId": "1",
+    "priority": "medium",
+    "dueDate": "2024-01-18T09:00:00Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-08T11:30:00Z",
+    "archived": false
+  },
+  {
+    "Id": 7,
+    "title": "Organize home office",
+    "description": "Clean desk, organize files, and set up new filing system",
+    "listId": "2",
+    "priority": "medium",
+    "dueDate": null,
+    "completed": true,
+    "completedAt": "2024-01-12T16:45:00Z",
+    "createdAt": "2024-01-10T13:00:00Z",
+    "archived": false
+  },
+  {
+    "Id": 8,
+    "title": "Learn new framework",
+    "description": "Complete tutorial for Next.js and build a sample project",
+    "listId": "3",
+    "priority": "low",
+    "dueDate": "2024-01-25T17:00:00Z",
+    "completed": false,
+    "completedAt": null,
+    "createdAt": "2024-01-05T12:00:00Z",
+    "archived": false
+  }
+]
